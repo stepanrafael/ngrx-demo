@@ -1,0 +1,42 @@
+<!-- Spinner -->
+<app-spinner *ngIf="loadingUsers$ | async"></app-spinner>
+
+<!-- Error message -->
+<ng-container *ngIf="usersLoadingFailed$ | async as errorMessage">
+  {{ errorMessage | json }}
+</ng-container>
+
+<!-- Table -->
+<table
+  class="min-w-full"
+  aria-describedby="table"
+  *ngIf="!(loadingUsers$ | async) && !(usersLoadingFailed$ | async)"
+>
+  <thead class="bg-gray-100">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th *ngIf="showEmails$ | async">Email</th>
+      <th>Street</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+    <tr
+      *ngFor="let user of users$ | async"
+      [class.active]="masterUser?.id === user.id"
+    >
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td *ngIf="showEmails$ | async">
+        <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+      </td>
+      <td>{{ user.address.street }}</td>
+      <td class="text-right">
+        <button class="primary" (click)="setMasterUser(user)">
+          Set as master
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

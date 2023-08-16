@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+button.primary {
+  @apply bg-gray-800 hover:bg-gray-700;
+  @apply text-white font-medium text-sm;
+  @apply py-2 px-4 rounded-md shadow-md;
+  @apply transition duration-300 ease-in-out;
+}
+
+table {
+  @apply text-sm;
+  thead {
+    th {
+      @apply py-3 px-6 text-left text-gray-600;
+    }
+  }
+  tbody {
+    tr {
+      @apply hover:bg-gray-100;
+      td {
+        @apply py-4 px-6;
+      }
+      &.active {
+        @apply bg-blue-200;
+      }
+    }
+  }
+}
