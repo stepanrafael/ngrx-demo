@@ -1,6 +1,6 @@
 ## About
 
-Simple working example of NgRx using store, reducers, selectors and effects for caching an Http request and the app state, so that when you navigate the app the state is preserved.
+Simple working example of NgRx using store, reducers, selectors, actions and effects for caching an Http request and the app state, so that when you navigate the app the state is preserved.
 
 ## Tech stack
 
