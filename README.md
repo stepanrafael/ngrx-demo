@@ -1,11 +1,14 @@
-# NgRx Demo
+## About
 
-NgRx. Simple demonstration.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+Simple working example of NgRx using store, reducers, selectors and effects for caching an Http request and the app state, so that when you navigate the app the state is preserved.
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular: 12.2.17
+Typescript: 4.3.5
+Tailwind: 3.3.3
+NgRx: 12.5.1
+RxJs: 6.6.7
 
 ## Further help
 
