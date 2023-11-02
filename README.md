@@ -9,6 +9,7 @@ Typescript: 4.3.5<br>
 Tailwind: 3.3.3<br>
 NgRx: 12.5.1<br>
 RxJs: 6.6.7<br>
+NodeJS: 14.17.3<br>
 
 ## Further help
 
